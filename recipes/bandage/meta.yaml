@@ -24,10 +24,13 @@ requirements:
     - {{ cdt('libxdamage') }}
     - {{ cdt('libxxf86vm') }}
     - {{ cdt('libxfixes') }}
+    - libxcb
+    - xcb-util
     - xorg-libxext
     - qt >=5.15
   run:
     - qt >=5.15
+    - libxcb
     - fonts-conda-ecosystem
     - xorg-libxrender
 test:
