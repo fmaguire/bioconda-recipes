@@ -18,21 +18,40 @@ requirements:
   build:
     - make
     - {{ compiler('cxx') }}
-    - {{ cdt('mesa-libgl-devel') }}
-    - {{ cdt('mesa-dri-drivers') }}
     - {{ cdt('libselinux') }}
     - {{ cdt('libxdamage') }}
     - {{ cdt('libxxf86vm') }}
     - {{ cdt('libxfixes') }}
+    - mesa
+    - mesa-libgl-devel-cos6-x86_64 
+    - freetype
+    - libglu
+    - xorg-libx11
+    - xorg-libxext
+    - xorg-libxfixes
+    - xorg-libxcb
+    - xorg-libxau
+    - xorg-libxrender
+    - xorg-libxdmcp
     - libxcb
     - xcb-util
-    - xorg-libxext
     - qt >=5.15
   run:
     - qt >=5.15
-    - libxcb
-    - fonts-conda-ecosystem
+    - mesa
+    - mesa-libgl-devel-cos6-x86_64 
+    - freetype
+    - libglu
+    - xorg-libx11
+    - xorg-libxext
+    - xorg-libxfixes
+    - xorg-libxcb
+    - xorg-libxau
     - xorg-libxrender
+    - xorg-libxdmcp
+    - libxcb
+    - xcb-util
+    - fonts-conda-ecosystem
 test:
   commands:
     - which Bandage
